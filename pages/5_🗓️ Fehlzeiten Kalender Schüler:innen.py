@@ -50,5 +50,5 @@ fehlstunden_gesamt = pd.to_numeric(filtered_df[hours_col], errors="coerce").fill
 tage_mit_fehlzeiten = len(absence_lookup)
 fehlstunden_pro_tag = fehlstunden_gesamt / tage_mit_fehlzeiten if tage_mit_fehlzeiten > 0 else 0.0
 
-summary_col3.metric("Fehlstunden gesamt", f"{fehlstunden_gesamt:.1f}")
+summary_col3.metric("Fehlstunden gesamt", f"{fehlstunden_gesamt}")
 summary_col4.metric("Fehlstunden pro Tag", f"{fehlstunden_pro_tag:.1f}")
